@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pizza Order Form</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Order Your Pizza</h1>
+    <form id="pizzaOrderForm" aria-label="Pizza Order Form">
+        <fieldset>
+            <legend>Personal Information</legend>
+            <label for="userName">Name:</label>
+            <input type="text" id="userName" name="userName" aria-required="true" placeholder="Your Name">
+            <span id="errorName" class="error-message"></span>
+
+            <label for="deliveryLocation">Delivery Location:</label>
+            <input type="text" id="deliveryLocation" name="deliveryLocation" placeholder="Your Address">
+            <span id="errorLocation" class="error-message"></span>
+        </fieldset>
+
+        <fieldset>
+            <legend>Select Your Pizza Toppings</legend>
+            <label>Choose your toppings:</label>
+            <div>
+                <input type="checkbox" id="toppingPepperoni" name="toppings" value="pepperoni">
+                <label for="toppingPepperoni">Pepperoni</label>
+            </div>
+            <div>
+                <input type="checkbox" id="toppingMushrooms" name="toppings" value="mushrooms">
+                <label for="toppingMushrooms">Mushrooms</label>
+            </div>
+            <div>
+                <input type="checkbox" id="toppingOnions" name="toppings" value="onions">
+                <label for="toppingOnions">Onions</label>
+            </div>
+            <div>
+                <input type="checkbox" id="toppingSausage" name="toppings" value="sausage">
+                <label for="toppingSausage">Sausage</label>
+            </div>
+            <span id="errorToppings" class="error-message"></span>
+        </fieldset>
+
+        <fieldset>
+            <legend>Delivery Information</legend>
+            <label for="deliveryDate">Delivery Date:</label>
+            <input type="date" id="deliveryDate" name="deliveryDate">
+            <span id="errorDate" class="error-message"></span>
+        </fieldset>
+
+        <input type="submit" value="Submit Order">
+    </form>
+
+    <script src="script.js"></script>
+</body>
+</html>
